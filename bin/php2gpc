@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__.'/../vendor/autoload.php';
+
+use Inside\PhpToGpc\Command;
+use Symfony\Component\Console\Application;
+
+
+$app = new Application;
+$app->addCommands([new Command]);
+
+$app
+    ->setDefaultCommand('cronus-compiler', true)
+    ->run();
